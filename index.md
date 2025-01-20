@@ -3,13 +3,15 @@
 layout: home
 
 hero:
-  name: "Crobotic"
+  name: "Crobot'ic"
   tagline: Association de Robotique
-  
+  image:
+    src: logo.png 
+    alt: "Logo Crobot'ic"
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Formations
+      link: /Formations/Arduino/arduino
     - theme: alt
       text: API Examples
       link: /api-examples

@@ -4,8 +4,9 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Crobotic",
   description: "Association de Robotique",
+  base: '/Crobotic/',
   themeConfig: {
-    logo: '/logo.png',
+    logo: './logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -34,6 +35,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
       { icon: 'discord', link: 'https://discord.gg/K45Ffdjw' }
-    ]
+    ],
+
+    search: {
+      provider: 'local'
+    }
   }
 })

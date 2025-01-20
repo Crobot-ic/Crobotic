@@ -1,4 +1,4 @@
-#Exemple 2 : Avec une entrée analogique :
+# Exemple 2 : Avec une entrée analogique 
 
 Maintenant regardons les ports analogiques dans ce nouvel exercice, vous devrez allumer une led avec un potentiomètre.
 
