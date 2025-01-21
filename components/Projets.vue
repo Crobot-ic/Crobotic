@@ -26,7 +26,7 @@ export default {
         },
         {
           title: "Nao Robot",
-          image: "/Crobotic/img_1.png",
+          image: "/Crobotic/img_1-compressed.png",
           alt: "Robot Nao",
           description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
