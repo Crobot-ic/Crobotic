@@ -6,7 +6,7 @@ export default defineConfig({
   description: "Association de Robotique",
   base: '/Crobotic/',
   themeConfig: {
-    logo: './logo.png',
+    logo: 'logo.png',
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -39,6 +39,15 @@ export default defineConfig({
 
     search: {
       provider: 'local'
-    }
+    },
+    vite: {
+      vue: {
+        template: {
+          compilerOptions: {
+            isCustomElement: (tag) => tag === "Projets",
+          },
+        },
+      },
+    },
   }
 })
