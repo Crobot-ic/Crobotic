@@ -63,24 +63,23 @@ export default {
   border-radius: 12px;
   padding: 16px;
   text-align: center;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   background-color: #202127;
 }
 
 .projet-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .projet-image {
   height: 150px;
-  width: auto; /* Permet de garder les proportions correctes */
+  width: auto;
   border-radius: 12px;
-  margin: 0 auto; /* Centre l'image horizontalement */
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
   object-fit: cover;
-  display: block; /* Nécessaire pour que margin: auto fonctionne */
+  display: block;
 }
 
 h3{

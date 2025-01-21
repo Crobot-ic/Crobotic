@@ -140,3 +140,7 @@
 .custom-title {
   color: #efd105; /* Par exemple, une couleur orange */
 }
+
+p {
+  text-align: justify;
+}

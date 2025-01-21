@@ -27,6 +27,17 @@ export default defineConfig({
             { text: 'Exercice 3', link: '/Formations/Arduino/arduino-ex3' },
             { text: 'Ressources', link: '/Formations/Arduino/arduino-ressources' }
           ]
+          },
+          {
+            text: 'Formation - ESP32',
+            items: [
+              { text: 'ESP32', link: '/Formations/ESP32/esp32-intro' },
+              { text: 'Arduino IDE', link: '/Formations/ESP32/esp32-arduino' },
+              { text: 'Exercice 1', link: '/Formations/Arduino/arduino-ex1' },
+              { text: 'Exercice 2', link: '/Formations/Arduino/arduino-ex2' },
+              { text: 'Exercice 3', link: '/Formations/Arduino/arduino-ex3' },
+              { text: 'Ressources', link: '/Formations/Arduino/arduino-ressources' }
+            ]
           }
         ]
       }
@@ -40,14 +51,6 @@ export default defineConfig({
     search: {
       provider: 'local'
     },
-    vite: {
-      vue: {
-        template: {
-          compilerOptions: {
-            isCustomElement: (tag) => tag === "Projets",
-          },
-        },
-      },
-    },
+
   }
 })
