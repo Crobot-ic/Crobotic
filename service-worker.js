@@ -12,18 +12,8 @@ self.addEventListener('install', (event) => {
                 '/logo-192.png',
                 '/logo-512.png',
                 '/Crobotic/Formation',
-                '/Crobotic/Formation/Arduino/arduino-code',
-                '/Crobotic/Formation/Arduino/arduino-ex1',
-                '/Crobotic/Formation/Arduino/arduino-ex2',
-                '/Crobotic/Formation/Arduino/arduino-ex3',
-                '/Crobotic/Formation/Arduino/arduino-ressources',
-                '/Crobotic/Formation/Arduino/arduino',
-                '/Crobotic/Formation/ESP32/esp32-arduino',
-                '/Crobotic/Formation/ESP32/esp32-exemple',
-                '/Crobotic/Formation/ESP32/esp32-intro',
-                '/Crobotic/Formation/ESP32/esp32-platformio',
-                '/Crobotic/Formation/ESP32/esp32-projet',
-                '/Crobotic/Formation/ESP32/esp32-wifi',
+                '/Crobotic/Formation/Arduino/arduino.html',
+                '/Crobotic/Formation/ESP32/esp32-intro.html',
 
                 // Images du dossier Arduino
                 '/Crobotic/Formation/Arduino/img/arduino_ide.png',
@@ -69,7 +59,13 @@ self.addEventListener('fetch', (event) => {
                 return cachedResponse;
             }
             console.log('[SW] Requête réseau', event.request);
-            return fetch(event.request);
+            return fetch(event.request).then((response) => {
+                // Mettre en cache les ressources récupérées du réseau
+                return caches.open('v1').then((cache) => {
+                    cache.put(event.request, response.clone());
+                    return response;
+                });
+            });
         })
     );
 });
