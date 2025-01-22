@@ -61,13 +61,7 @@ self.addEventListener('fetch', (event) => {
                 return cachedResponse;
             }
             console.log('[SW] Requête réseau', event.request);
-            return fetch(event.request).then((response) => {
-                // Mettre en cache les ressources récupérées du réseau
-                return caches.open('v1').then((cache) => {
-                    cache.put(event.request, response.clone());
-                    return response;
-                });
-            });
+            return fetch(event.request);
         })
     );
 });
