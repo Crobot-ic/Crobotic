@@ -7,11 +7,10 @@ self.addEventListener('install', (event) => {
             console.log('[SW] Mise en cache des fichiers');
             return cache.addAll([
                 '/',
-                '/index.html',
+                '/Crobotic/index.html',
                 '/Crobotic/',
                 '/logo-192.png',
                 '/logo-512.png',
-                '/styles.css',  // Ajoutez vos autres fichiers nécessaires
             ]);
         })
     );
