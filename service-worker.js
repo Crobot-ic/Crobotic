@@ -1,7 +1,23 @@
+// Liste des fichiers essentiels à pré-cacher
+const PRECACHE_FILES = [
+    '/', // Page d'accueil
+    '/Crobotic/index.html', // Index
+    '/Crobotic/assets/app.js', // Exemple de fichier JS essentiel
+    '/Crobotic/assets/style.css', // Exemple de fichier CSS essentiel
+    '/logo-192.png', // Logo pour PWA
+    '/logo-512.png',
+];
+
 // Installation du service worker
 self.addEventListener('install', (event) => {
     console.log('[SW] Installation');
-    self.skipWaiting(); // Active le service worker immédiatement
+    event.waitUntil(
+        caches.open('static-cache').then((cache) => {
+            console.log('[SW] Pré-caching des fichiers essentiels');
+            return cache.addAll(PRECACHE_FILES);
+        })
+    );
+    self.skipWaiting(); // Active immédiatement le service worker
 });
 
 // Activation du service worker
@@ -9,10 +25,10 @@ self.addEventListener('activate', (event) => {
     console.log('[SW] Activation');
     event.waitUntil(
         caches.keys().then((cacheNames) => {
-            // Supprimez les anciens caches si nécessaire
+            // Supprime les anciens caches si nécessaire
             return Promise.all(
                 cacheNames.map((cacheName) => {
-                    if (cacheName !== 'dynamic-cache') {
+                    if (cacheName !== 'static-cache' && cacheName !== 'dynamic-cache') {
                         console.log('[SW] Suppression de l’ancien cache:', cacheName);
                         return caches.delete(cacheName);
                     }
@@ -20,7 +36,7 @@ self.addEventListener('activate', (event) => {
             );
         })
     );
-    self.clients.claim(); // Prend immédiatement le contrôle des pages ouvertes
+    self.clients.claim();
 });
 
 // Gestion des requêtes réseau avec cache dynamique
