@@ -1,10 +1,12 @@
 // Liste des fichiers essentiels à pré-cacher
 const PRECACHE_FILES = [
-    '/', // Page d'accueil
-    '/Crobotic/index.html', // Index
-    '/Crobotic/assets/app.js', // Exemple de fichier JS essentiel
-    '/Crobotic/assets/style.css', // Exemple de fichier CSS essentiel
-    '/logo-192.png', // Logo pour PWA
+    '/',
+    '/Crobotic/',
+    '/Crobotic/Formations/ESP32/esp32-intro.html',
+    '/Crobotic/index.html',
+    '/Crobotic/assets/app.js',
+    '/Crobotic/assets/style.css',
+    '/logo-192.png',
     '/logo-512.png',
 ];
 
