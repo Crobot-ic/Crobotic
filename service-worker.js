@@ -40,6 +40,8 @@ self.addEventListener('install', (event) => {
                 '/Crobotic/Formation/ESP32/img/img.png',
                 '/Crobotic/Formation/ESP32/img/station.png'
             ]);
+        }).catch(error => {
+            console.error('[SW] Erreur lors de la mise en cache:', error);
         })
     );
 });
