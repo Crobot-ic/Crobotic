@@ -3,6 +3,9 @@
 
 # ⚡ ESP32
 
+## Table des matières
+[[toc]]
+
 ## 🌟 Introduction
 
 L'ESP32 est une carte de développement **Wi-Fi et Bluetooth** basée sur le module ESP32 d'Espressif. Cette carte est parfaite pour les projets IoT grâce à ses fonctionnalités avancées et sa puissance. Voici ses caractéristiques principales :
@@ -61,7 +64,20 @@ L'ESP32 est une carte de développement **Wi-Fi et Bluetooth** basée sur le mod
 > <img src="https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2019/08/esp32-vs-esp8266-devlopment-boards.jpg?w=750&quality=100&strip=all&ssl=1" alt="ESP32 vs ESP8266" width="300"/>
 > ESP32 à gauche, ESP8266 à droite.
 
-## 🎯 Pourquoi choisir l'ESP32 ?
+Voici une section mise à jour avec les ressources utiles pour compléter votre exemple de cours. Ces liens fournissent des informations supplémentaires pour approfondir vos connaissances sur l'ESP32 et les projets IoT.
 
-Avec l'ESP32, vous disposez d'une carte puissante et flexible pour développer vos idées, que ce soit pour un objet connecté, un système de contrôle automatisé ou une solution domotique. L'ESP32 vous offre la liberté de concevoir tout en maximisant les performances !
+---
+
+## 🔗 Ressources utiles
+
+### 📖 Documentation et cours
+- [Formation Arduino](../Arduino/arduino-code) :Apprenez à utiliser l'Arduino IDE avec Arduino.
+- [Documentation officielle ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/) 
+
+### 🎥 Vidéos 
+- [Programmer des objets connectés en 15 min !! (Tuto ESPHome 2022)](https://www.youtube.com/watch?v=3GbyYQHQvV8) 
+- [Arduino To ESP32: How to Get Started!](https://www.youtube.com/watch?v=RiYnucfy_rs) 
+
+### 🛠️ Kits et exemples
+- [Freenove Ultimate Starter Kit for ESP32](https://github.com/Freenove/Freenove_Ultimate_Starter_Kit_for_ESP32)
 

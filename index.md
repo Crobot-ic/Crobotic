@@ -36,4 +36,3 @@ import Projets from './components/Projets.vue'
 
 <Projets></Projets>
 
----

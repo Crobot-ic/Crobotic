@@ -23,9 +23,3 @@ Pour ajouter la prise en charge de l'ESP32 à l'IDE Arduino, suivez ces étapes 
 
 
 
-## 🔗 Ressources utiles
-
-- [Formation Arduino](../Arduino/arduino-code) – Apprenez à utiliser l'Arduino IDE avec Arduino.
-- [Documentation officielle ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/) – Tout ce qu'il faut savoir sur l'ESP32 avec Arduino.
-
----

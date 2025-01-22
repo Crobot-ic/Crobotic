@@ -18,7 +18,7 @@ export default {
       projets: [
         {
           title: "Matrice LED",
-          image: "/Crobotic/img.png",
+          image: "/Crobotic/img.jpg",
           alt: "Matrice LED",
           description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -26,7 +26,7 @@ export default {
         },
         {
           title: "Nao Robot",
-          image: "/Crobotic/img_1-compressed.png",
+          image: "/Crobotic/img_1-compressed.jpg",
           alt: "Robot Nao",
           description:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",

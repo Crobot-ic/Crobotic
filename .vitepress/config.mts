@@ -4,6 +4,24 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Crobotic",
   description: "Association de Robotique",
+
+
+    head: [
+      ['link', { rel: 'manifest', href: '/Crobotic/manifest.webmanifest' }],
+      ['script', { type: 'text/javascript' }, `
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/Crobotic/service-worker.js').then((registration) => {
+            console.log('Service Worker enregistré avec succès: ', registration);
+          }).catch((error) => {
+            console.log('Erreur d enregistrement du Service Worker: ', error);
+          });
+        });
+      }
+    `],
+    ]
+
+  ,
   base: '/Crobotic/',
   themeConfig: {
     logo: 'logo.png',
@@ -33,10 +51,11 @@ export default defineConfig({
             items: [
               { text: 'ESP32', link: '/Formations/ESP32/esp32-intro' },
               { text: 'Arduino IDE', link: '/Formations/ESP32/esp32-arduino' },
-              { text: 'Exercice 1', link: '/Formations/Arduino/arduino-ex1' },
-              { text: 'Exercice 2', link: '/Formations/Arduino/arduino-ex2' },
-              { text: 'Exercice 3', link: '/Formations/Arduino/arduino-ex3' },
-              { text: 'Ressources', link: '/Formations/Arduino/arduino-ressources' }
+              { text: 'Connexion Wifi avec ESP32', link: '/Formations/ESP32/esp32-wifi' },
+                { text: 'Exemple', link: '/Formations/ESP32/esp32-exemple' },
+              { text: 'Platform IO', link: '/Formations/ESP32/esp32-platformio' },
+              { text: 'Projet', link: '/Formations/ESP32/esp32-projet' },
+              { text: 'Ressources', link: '/Formations/ESP32/esp32-ressources' }
             ]
           }
         ]
@@ -52,5 +71,11 @@ export default defineConfig({
       provider: 'local'
     },
 
-  }
+    footer: {
+      message: "Réaliser par l'association Crobot'ic.",
+      copyright: "© 2025 Crobot'ic. Tous droits réservés."
+    },
+
+  },
+
 })
