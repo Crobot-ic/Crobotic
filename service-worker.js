@@ -11,6 +11,31 @@ self.addEventListener('install', (event) => {
                 '/Crobotic/',
                 '/logo-192.png',
                 '/logo-512.png',
+                '/Crobotic/Formation',
+                // Images du dossier Arduino
+                '/Crobotic/Formation/Arduino/img/arduino_ide.png',
+                '/Crobotic/Formation/Arduino/img/arduino_ide2.png',
+                '/Crobotic/Formation/Arduino/img/bouton-schema.png',
+                '/Crobotic/Formation/Arduino/img/bouton.png',
+                '/Crobotic/Formation/Arduino/img/br.png',
+                '/Crobotic/Formation/Arduino/img/Breadboard.png',
+                '/Crobotic/Formation/Arduino/img/ex1.png',
+                '/Crobotic/Formation/Arduino/img/ex2.png',
+                '/Crobotic/Formation/Arduino/img/fond.jpg',
+                '/Crobotic/Formation/Arduino/img/fond2.jpg',
+                '/Crobotic/Formation/Arduino/img/led.png',
+                '/Crobotic/Formation/Arduino/img/logo.png',
+                '/Crobotic/Formation/Arduino/img/mega.png',
+                '/Crobotic/Formation/Arduino/img/nano.png',
+                '/Crobotic/Formation/Arduino/img/pins.png',
+                '/Crobotic/Formation/Arduino/img/Potentiometre.png',
+                '/Crobotic/Formation/Arduino/img/pwm.jpg',
+                '/Crobotic/Formation/Arduino/img/uno.png',
+                // Images du dossier ESP32
+                '/Crobotic/Formation/ESP32/img/Ap.png',
+                '/Crobotic/Formation/ESP32/img/fond-esp.png',
+                '/Crobotic/Formation/ESP32/img/img.png',
+                '/Crobotic/Formation/ESP32/img/station.png'
             ]);
         })
     );
