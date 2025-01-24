@@ -141,6 +141,8 @@
   color: #efd105; /* Par exemple, une couleur orange */
 }
 
-p {
+p:not(.tagline,.affiliation) {
   text-align: justify;
 }
+
+

@@ -4,7 +4,7 @@
   "start_url": "/Crobotic/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffa500",
+  "theme_color": "#1b1b1f",
   "icons": [
     {
       "src": "/Crobotic/logo-192.png",

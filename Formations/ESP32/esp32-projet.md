@@ -1,3 +1,7 @@
+---
+   Ne fonctionne pas sur la 5g et necessity une connexion 2.1ghz
+---
+
 # Station météo
 
 ![Station météo](https://github.com/lmarzen/esp32-weather-epd/blob/main/showcase/demo-london.jpg?raw=true)

@@ -11,6 +11,13 @@ L'ESP32 est un microcontrôleur puissant, capable de se connecter à Internet vi
 2. 🌐 **Mode Point d'Accès (AP)** : L'ESP32 crée son propre réseau Wi-Fi.
 3. 🔄**Mode Combiné** : L'ESP32 agit simultanément en tant que station et point d'accès.
 
+::: warning Attention
+
+N'utilisez pas le réseaux de l'école !
+Si vous faites un partage de connexion avec votre téléphone vérifié que vous êtes bien en 4G (et pas 5G) et que vous utilisez la bande 2.4Ghz.
+
+:::
+
 
 ## ESP32 en mode Station 📡
 

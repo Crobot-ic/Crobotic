@@ -13,3 +13,4 @@ PlatformIO est un environnement de développement pour les microcontrôleurs. Il
 5. Écrivez votre code dans le fichier `src/main.cpp`.
 6. Compilez et téléversez votre code sur la carte.
 
+https://espressif-docs.readthedocs-hosted.com/projects/arduino-esp32/en/latest/installing.html

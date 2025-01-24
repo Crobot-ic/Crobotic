@@ -54,9 +54,8 @@ export default defineConfig({
               { text: 'Connexion Wifi avec ESP32', link: '/Formations/ESP32/esp32-wifi' },
                 { text: 'Exemple', link: '/Formations/ESP32/esp32-exemple' },
               { text: 'Platform IO', link: '/Formations/ESP32/esp32-platformio' },
-              { text: 'Projet', link: '/Formations/ESP32/esp32-projet' },
-              { text: 'Ressources', link: '/Formations/ESP32/esp32-ressources' }
-            ]
+              { text: 'Projet', link: '/Formations/ESP32/esp32-projet' }
+                          ]
           }
         ]
       }
