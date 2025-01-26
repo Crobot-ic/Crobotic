@@ -15,13 +15,20 @@ const PRECACHE_FILES = [
 self.addEventListener('install', (event) => {
     console.log('[SW] Installation');
     event.waitUntil(
-        caches.open(CACHE_NAME).then((cache) => {
+        caches.open(CACHE_NAME).then(async (cache) => {
             console.log('[SW] Pré-caching des fichiers essentiels');
-            return cache.addAll(PRECACHE_FILES);
+            for (const file of PRECACHE_FILES) {
+                try {
+                    await cache.add(file);
+                } catch (error) {
+                    console.error('[SW] Erreur lors du précaching de:', file, error);
+                }
+            }
         })
     );
     self.skipWaiting();
 });
+
 
 // Activation du service worker
 self.addEventListener('activate', (event) => {
@@ -36,13 +43,26 @@ self.addEventListener('activate', (event) => {
                     }
                 })
             );
-        })
+        }).then(() => self.clients.claim())
     );
-    self.clients.claim();
+
+    // Forcer les clients à se mettre à jour
+    self.clients.matchAll({ type: 'window' }).then((clients) => {
+        clients.forEach((client) => client.navigate(client.url));
+    });
 });
+
 
 // Gestion des requêtes réseau avec cache dynamique
 self.addEventListener('fetch', (event) => {
+    const url = new URL(event.request.url);
+
+    // Ignorer les requêtes avec un schéma non supporté
+    if (!url.protocol.startsWith('http')) {
+        console.log('[SW] Requête ignorée (schéma non supporté):', url.href);
+        return;
+    }
+
     event.respondWith(
         caches.match(event.request).then((cachedResponse) => {
             if (cachedResponse) {
@@ -76,6 +96,7 @@ self.addEventListener('fetch', (event) => {
         })
     );
 });
+
 self.addEventListener('activate', (event) => {
     console.log('[SW] Activation');
     event.waitUntil(
