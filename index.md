@@ -14,7 +14,7 @@ hero:
       link: /Formations/Arduino/arduino
     - theme: alt
       text: Découvrir nos projets
-      link: /api-examples
+      link: /Projets/Assos/avenir
 
 features:
   - title:  "🧠 Apprendre"
@@ -26,7 +26,10 @@ features:
   
 
 ---
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSKFT9NP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 
 
