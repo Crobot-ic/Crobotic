@@ -1,4 +1,5 @@
-// Liste des fichiers essentiels à pré-cacher
+// Version du cache
+const CACHE_NAME = 'static-cache-v2'; // Change la version pour invalider l'ancien cache
 const PRECACHE_FILES = [
     '/',
     '/Crobotic/',
@@ -14,12 +15,12 @@ const PRECACHE_FILES = [
 self.addEventListener('install', (event) => {
     console.log('[SW] Installation');
     event.waitUntil(
-        caches.open('static-cache').then((cache) => {
+        caches.open(CACHE_NAME).then((cache) => {
             console.log('[SW] Pré-caching des fichiers essentiels');
             return cache.addAll(PRECACHE_FILES);
         })
     );
-    self.skipWaiting(); // Active immédiatement le service worker
+    self.skipWaiting();
 });
 
 // Activation du service worker
@@ -27,10 +28,9 @@ self.addEventListener('activate', (event) => {
     console.log('[SW] Activation');
     event.waitUntil(
         caches.keys().then((cacheNames) => {
-            // Supprime les anciens caches si nécessaire
             return Promise.all(
                 cacheNames.map((cacheName) => {
-                    if (cacheName !== 'static-cache' && cacheName !== 'dynamic-cache') {
+                    if (cacheName !== CACHE_NAME) {
                         console.log('[SW] Suppression de l’ancien cache:', cacheName);
                         return caches.delete(cacheName);
                     }
@@ -53,7 +53,6 @@ self.addEventListener('fetch', (event) => {
             console.log('[SW] Récupération réseau et mise en cache:', event.request.url);
             return fetch(event.request)
                 .then((response) => {
-                    // Vérifiez que la réponse est valide avant de la mettre en cache
                     if (
                         !response ||
                         response.status !== 200 ||
@@ -62,7 +61,7 @@ self.addEventListener('fetch', (event) => {
                         return response;
                     }
 
-                    return caches.open('dynamic-cache').then((cache) => {
+                    return caches.open(CACHE_NAME).then((cache) => {
                         cache.put(event.request, response.clone());
                         return response;
                     });
@@ -74,6 +73,32 @@ self.addEventListener('fetch', (event) => {
                         { status: 404 }
                     );
                 });
+        })
+    );
+});
+self.addEventListener('activate', (event) => {
+    console.log('[SW] Activation');
+    event.waitUntil(
+        caches.keys().then((cacheNames) => {
+            return Promise.all(
+                cacheNames.map((cacheName) => {
+                    if (cacheName !== CACHE_NAME) {
+                        console.log('[SW] Suppression de l’ancien cache:', cacheName);
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+    );
+
+    // Forcer les clients à utiliser la nouvelle version
+    event.waitUntil(
+        self.clients.claim().then(() => {
+            self.clients.matchAll({ type: 'window' }).then((clients) => {
+                clients.forEach((client) => {
+                    client.navigate(client.url);
+                });
+            });
         })
     );
 });
