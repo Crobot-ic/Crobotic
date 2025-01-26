@@ -1,5 +1,5 @@
 // Version du cache
-const CACHE_NAME = 'static-cache-v2'; // Change la version pour invalider l'ancien cache
+const CACHE_NAME = 'static-cache-v3';
 const PRECACHE_FILES = [
     '/',
     '/Crobotic/',
@@ -26,8 +26,9 @@ self.addEventListener('install', (event) => {
             }
         })
     );
-    self.skipWaiting();
+    self.skipWaiting(); // Force l'installation immédiate
 });
+
 
 
 // Activation du service worker
@@ -43,12 +44,15 @@ self.addEventListener('activate', (event) => {
                     }
                 })
             );
-        }).then(() => self.clients.claim())
+        })
     );
 
-    // Forcer les clients à se mettre à jour
-    self.clients.matchAll({ type: 'window' }).then((clients) => {
-        clients.forEach((client) => client.navigate(client.url));
+    self.clients.claim().then(() => {
+        self.clients.matchAll({ type: 'window' }).then((clients) => {
+            clients.forEach((client) => {
+                client.navigate(client.url);
+            });
+        });
     });
 });
 
