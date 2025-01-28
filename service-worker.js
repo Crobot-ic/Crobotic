@@ -1,5 +1,5 @@
 // Version du cache
-const CACHE_NAME = 'static-cache-v3';
+const CACHE_NAME = 'static-cache-v4';
 const PRECACHE_FILES = [
     '/',
     '/Crobotic/',
