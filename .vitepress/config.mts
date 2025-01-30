@@ -5,11 +5,14 @@ export default defineConfig({
   title: "Crobotic",lang: 'fr-FR',
   titleTemplate: ':title - Crobotic',
   description: "Association de Robotique",
+  markdown: {
+    math: true
+  },
 
 
-    head: [
-      ['link', { rel: 'manifest', href: '/Crobotic/manifest.webmanifest' }],
-      ['script', { type: 'text/javascript' }, `
+  head: [
+    ['link', { rel: 'manifest', href: '/Crobotic/manifest.webmanifest' }],
+    ['script', { type: 'text/javascript' }, `
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('/Crobotic/service-worker.js').then((registration) => {
@@ -20,14 +23,15 @@ export default defineConfig({
         });
       }
     `],
-      ['script', { type: 'text/javascript' }, `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-KSKFT9NP');`
-    ],
-]
+    ['script', { async: true, src: 'https://www.googletagmanager.com/gtag/js?id=G-BEFKEWYH1Q' }],
+    ['script', {}, `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BEFKEWYH1Q');
+    `],
+
+  ]
   ,
   base: '/Crobotic/',
   themeConfig: {
@@ -61,10 +65,28 @@ export default defineConfig({
             items: [
               {text: 'ESP32', link: '/Formations/ESP32/esp32-intro'},
               {text: 'Arduino IDE', link: '/Formations/ESP32/esp32-arduino'},
-              {text: 'Connexion Wifi avec ESP32', link: '/Formations/ESP32/esp32-wifi'},
-              {text: 'Exemple', link: '/Formations/ESP32/esp32-exemple'},
               {text: 'Platform IO', link: '/Formations/ESP32/esp32-platformio'},
+              {text: 'Connexion Wifi avec ESP32', link: '/Formations/ESP32/esp32-wifi'},
+              {text: 'ESPHome', link: '/Formations/ESP32/esp32-esphome'},
+              {text: 'Exemple 1', link: '/Formations/ESP32/esp32-exemple1'},
+              {text: 'Exemple 2', link: '/Formations/ESP32/esp32-exemple2'},
               {text: 'Projet', link: '/Formations/ESP32/esp32-projet'}
+            ]
+          },
+          {
+            text: 'Formation - RaspberryPi',
+            collapsed: true,
+            items: [
+              {text: 'RaspberryPi', link: '/Formations/Raspberry/raspberry-intro'},
+
+            ]
+          },
+          {
+            text: 'Formation - Electricité',
+            collapsed: true,
+            items: [
+              {text: 'Introduction', link: '/Formations/Electricite/elec-intro'},
+              {text: 'Lois', link: '/Formations/Electricite/elec-lois'},
             ]
           }
         ]
@@ -90,7 +112,8 @@ export default defineConfig({
               {text: 'Projet 2', link: '/Projets/avenir'},
 
             ]
-          }
+          },
+
         ]
       },
     },
