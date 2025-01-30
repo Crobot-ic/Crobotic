@@ -13,7 +13,7 @@ L'ESP32 est un microcontrôleur puissant, capable de se connecter à Internet vi
 
 ::: warning Attention
 
-N'utilisez pas le réseaux de l'école !
+N'utilisez pas le réseau de l'école !
 Si vous faites un partage de connexion avec votre téléphone vérifié que vous êtes bien en 4G (et pas 5G) et que vous utilisez la bande 2.4Ghz.
 
 :::

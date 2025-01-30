@@ -15,7 +15,6 @@ Pour lire la valeur de la tension, on utilise la fonction :`analogRead(numero_du
 > Cette fonction renvoie une valeur entre 0 (soit 0V) et 1023 (soit 5V).
 >
 
-[Circuit design Potentio | Tinkercad](https://www.tinkercad.com/things/drtC1OEvBnH)
 
 ![Untitled](./img/ex2.png)
 
@@ -39,3 +38,7 @@ void loop ()
   }
 }
 ```
+
+<iframe width="725" height="453" src="https://www.tinkercad.com/embed/ioKgvMuRn1D?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+👉 [Circuit design Potentio | Tinkercad](https://www.tinkercad.com/things/drtC1OEvBnH)

@@ -22,7 +22,7 @@ features:
   - title:  "🤖 Construire"
     details: Participez à la construction de robots et des projets électroniques.
   - title: "💡Innover"
-    details: Rejoignez une communauté d'innovateurs et participez à des ...
+    details: Rejoignez une communauté d'innovateurs
   
 
 ---
@@ -38,11 +38,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <Projets></Projets>
 
 
-
-
-## <span class="custom-title">Projets Personnels des membres</span>
-
-
+<!--- ## <span class="custom-title">Projets Personnels des membres</span> -->
 
 <script setup>
 import Projets from './components/Projets.vue';
@@ -57,46 +53,52 @@ import {
 
 const coreMembers = [
   {
-    avatar: 'https://avatars.githubusercontent.com/u/123359546?s=400&u=210a71763e5c1d9a759c080a409ae88f2bdbd5a5&v=4',
+    avatar: 'https://cdn.discordapp.com/avatars/689427361485160519/39c360f5799a637a6d23559d66935740.webp',
     name: 'Baptiste L.',
-    title: 'President',
+    title: 'Président',
     links: [
-      { icon: 'github', link: 'https://github.com/Corentin-k' },
+          { icon: 'github', link: 'https://github.com/Crobot-ic' },
+        { icon: 'discord', link: 'https://discord.gg/vUWPQKYP' }
     ]
   },
   {
     avatar: 'https://avatars.githubusercontent.com/u/123359546?s=400&u=210a71763e5c1d9a759c080a409ae88f2bdbd5a5&v=4',
     name: 'Corentin K.',
-    title: 'Vice Président',
+    title: 'Vice-Président',
     links: [
-      { icon: 'github', link: 'https://github.com/Corentin-k' }
-    ]
-  },
-{
-    avatar: 'https://avatars.githubusercontent.com/u/123359546?s=400&u=210a71763e5c1d9a759c080a409ae88f2bdbd5a5&v=4',
-    name: 'Roy T.T.',
-    title: 'Vice secrétaire',
-    links: [
-      { icon: 'github', link: 'https://github.com/Corentin-k' }
-    ]
-  },
-{
-    avatar: 'https://avatars.githubusercontent.com/u/123359546?s=400&u=210a71763e5c1d9a759c080a409ae88f2bdbd5a5&v=4',
-    name: 'Thibault M.',
-    title: 'Secrétaire',
-    links: [
-      { icon: 'linkedin', link: 'https://github.com/Corentin-k' }
-    ]
-  },
-{
-    avatar: 'https://avatars.githubusercontent.com/u/123359546?s=400&u=210a71763e5c1d9a759c080a409ae88f2bdbd5a5&v=4',
-    name: 'Tristan M.',
-    title: 'Trésorier',
-    links: [
-      { icon: 'discord', link: 'https://github.com/Corentin-k' }
+      { icon: 'github', link: 'https://github.com/Corentin-k' },
+      { icon: 'discord', link: 'https://discord.gg/vUWPQKYP' }
     ]
   },
 
+{
+    avatar: 'https://cdn.discordapp.com/avatars/781486043912208395/692b2bf80ab4a61d483ba3fe6bae8ed0.webp',
+    name: 'Thibault M.',
+    title: 'Secrétaire',
+    links: [
+{ icon: 'github', link: 'https://github.com/Crobot-ic' },
+      { icon: 'discord', link: 'https://discord.gg/vUWPQKYP' }
+    ]
+  },
+{
+    avatar: 'https://cdn.discordapp.com/avatars/535548033031471169/a90162c23609d7cac7662554987a192f.webp',
+    name: 'Tristan M.',
+    title: 'Trésorier',
+    links: [
+{ icon: 'github', link: 'https://github.com/Crobot-ic' },
+      { icon: 'discord', link: 'https://discord.gg/vUWPQKYP' }
+    ]
+  },
+
+{
+    avatar: 'https://cdn.discordapp.com/avatars/401503937519419393/f8d0060c17b467b3508bd07b9ffcb952.webp',
+    name: 'Roy T.T.',
+    title: 'Vice secrétaire',
+    links: [
+{ icon: 'github', link: 'https://github.com/Crobot-ic' },
+      { icon: 'discord', link: 'https://discord.gg/vUWPQKYP' }
+    ]
+  },
   
 ];
 
@@ -106,7 +108,6 @@ const coreMembers = [
 <VPTeamPage>
 <VPTeamPageTitle>
   <template #title ><span class="custom-title">La team Crobotic</span></template>
-  
 </VPTeamPageTitle>
 <VPTeamPageSection>
 <template #members>

@@ -3,8 +3,54 @@
 
 # ⚡ ESP32
 
-## Table des matières
-[[toc]]
+## 📖 Sommaire de la Formation ESP32
+
+1. [**Introduction à l'ESP32**](./esp32-intro)
+
+2. [**Configuration avec Arduino IDE**](./esp32-arduino)
+
+3. [**Configuration avec Platform IO**](./esp32-platformio)
+
+4. [**Connexion Wi-Fi avec l'ESP32**](./esp32-wifi).
+
+5. [**Présentation ESPHome**](./esp32-esphome)
+
+6. [**Exemples pratiques**](./esp32-exemple2)
+
+7. [**Projet final : Créez votre projet IoT avec l'ESP32**](./esp32-projet)
+
+---
+
+## 🌟 Introduction
+
+L'ESP32 est une carte de développement **Wi-Fi et Bluetooth** basée sur le module ESP32 d'Espressif. Cette carte est idéale pour les projets IoT grâce à ses fonctionnalités avancées et sa puissance. Voici ses caractéristiques principales :
+
+- **Processeur Xtensa dual-core** cadencé à 240 MHz.
+- **Mémoire** : 520 Ko de SRAM et 4 Mo de flash.
+- **Connectivité** : Wi-Fi 802.11 b/g/n et Bluetooth 4.2.
+- **Compatibilité** : Programmable avec l'IDE Arduino, Platform IO ou MicroPython.
+
+> 📌 **Remarque importante :** L'ESP32 fonctionne en 3.3V, contrairement à des cartes comme l'Arduino Uno qui acceptent aussi le 5V.
+
+---
+
+## 🛠️ Objectifs de la Formation
+
+- Comprendre les bases de l'ESP32 et ses fonctionnalités.
+- Configurer votre environnement de développement avec Arduino IDE ou Platform IO.
+- Apprendre à connecter votre ESP32 à un réseau Wi-Fi.
+- Mettre en œuvre des projets pratiques pour maîtriser la programmation et les fonctionnalités IoT.
+
+---
+
+## 🔗 Ressources complémentaires
+
+- [Documentation officielle ESP32](https://docs.espressif.com/projects/arduino-esp32/en/latest/)
+- [Guide Platform IO](https://platformio.org/)
+- [Kits de démarrage ESP32](https://www.amazon.fr/s?k=kit+esp32)
+
+---
+
 
 ## 🌟 Introduction
 

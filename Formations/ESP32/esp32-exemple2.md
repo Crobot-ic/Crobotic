@@ -15,12 +15,21 @@ L'ensemble du code est disponible sur le GitHub de Corentin-k : [Home-Vue](https
     - Création d'un serveur web basique.
 2. **Manipuler les capteurs et périphériques** :
     - Lecture de données d'un capteur DHT11.
-    - Contrôle d'un ruban de LEDs WS2812.
+    - Contrôle d'un ruban de LEDs WS2812B.
 3. **Apprendre à créer des API simples** :
     - Gestion des requêtes HTTP GET.
     - Réponses JSON pour faciliter l'intégration.
 
+::: info ℹ️ Rubans LED
 
+- Classique : LEDs uniformes.
+- Adressable : LEDs contrôlables individuellement.
+  - WS2812B (5V, RGB).
+  - SK6812 (12V, RGBW, blanc pur, légèrement plus cher).
+
+[PROGRAMMER des BANDEAUX LED en 10min !! - Abrège ](https://www.youtube.com/watch?v=xw8iRNxt-VU)
+
+:::
 
 ## Matériel nécessaire
 
